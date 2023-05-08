@@ -14,7 +14,8 @@ app.post("/", async (req, res, next) => {
   });
 app.post("/api/data", async (req, res, next) => {
   console.log(req.body);
-  const Message = req.body;
+  const Message = req.body.Message;
+  
   Message.map(async(item)=>{
     console.log(item);
     const data={
