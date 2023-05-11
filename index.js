@@ -15,14 +15,16 @@ app.post("/", async (req, res, next) => {
 app.post("/api/data", async (req, res, next) => {
   console.log(req.body);
   const Message = req.body.Message;
-  
+  const Area = req.body.Area;
+  const Category = req.body.Category;
+
   Message.map(async(item)=>{
     console.log(item);
     const data={
       "to":item,
       "notification":{
-        "title":"alert",
-        "body":"Someone listed property in your area..."
+        "title":`${Property Alert}`,
+        "body":`New ${Category} is added near to you at ${Area}`
       }
     }
     
