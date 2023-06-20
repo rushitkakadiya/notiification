@@ -24,7 +24,7 @@ app.post("/api/data", async (req, res, next) => {
       "to":item,
       "notification":{
         "title":`Property Alert`,
-        "body":`New ${Category} is added near to you at your City`
+        "body":`New Property is added near to you at your City`
       }
     }
     
